@@ -18,4 +18,5 @@ $labelDescription = New-Object System.Windows.Forms.Label
     $formTimer.Controls.Add($labelDescription)
 
 # Display Form
-$formTimer.ShowDialog()
+$formTimer.Add_Shown({$formTimer.Activate()})
+[void] $formTimer.ShowDialog()
